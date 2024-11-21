@@ -1,0 +1,263 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body{
+    margin: 0; 
+    font-family: 'Helvetica', Arial, sans-serif;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Header */
+header{
+    position: fixed;
+    width: 100vw;
+    z-index: 3;
+}
+header div:nth-child(1){
+    z-index: 1;
+}
+#menu-button.black .line-top,
+#menu-button.black .line-middle,
+#menu-button.black .line-bottom{
+    stroke: #000;
+}
+#menu-button:active,
+#menu-button:focus{
+    box-shadow: none;
+}
+/* Header: Menu button animations */
+#menu-button .line-top {
+    transform: rotate(0deg) translate(0px,0px);
+    transform-origin: top right;
+    transition: transform 0.3s ease;
+}
+#menu-button .line-middle {
+    transform: scale(1);
+    transform-origin: center;
+    transition: transform 0.4s ease;
+}
+#menu-button .line-bottom {
+    transform: rotate(0deg) translate(0px,0px);
+    transform-origin:  bottom left;
+    transition: transform 0.3s ease;
+}
+#menu-button.active .line-top {
+    transform: rotate(-45deg) translate(-20px,-18px);
+    transform-origin: top right;
+    transition: transform 0.3s ease;
+}
+
+#menu-button.active .line-middle {
+    transform: scale(0);
+    transform-origin: center;
+    transition: transform 0.4s ease;
+}
+#menu-button.active .line-bottom {
+    transform: rotate(45deg) translate(-60px,-39px);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease;
+}
+
+/* Header: menu's container */
+#menu-container{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height:100%;
+    background: rgba(15, 15, 15, 0.2);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 2px );
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+#menu-container.active{
+    opacity:1;
+    z-index: 2;
+}
+header nav ul > li.active a,
+header nav ul > li:hover a {
+    font-weight: bold;
+}
+header nav ul > li.active img,
+header nav ul > li:hover img,
+.spin {
+    transform-origin: center center;
+    animation: spinner 3s infinite linear;
+}
+
+/* Menu's brand option */
+#brands-dropdown{
+    width: 40vw;
+    height: 2em;
+}
+#brands-list{
+    height: 0;
+    overflow:hidden;
+}
+#brands-list a{
+    font-weight: normal;
+}
+#brands-list.ungrow{
+    animation: shrink-height 1s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+}
+#brands-list.grow{
+    overflow:visible;
+    animation: grow-height 1s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+
+}
+#brands-list a:hover,
+#brands-list a:focus,
+#brands-list a:active{
+    font-weight: bold;
+}
+#brands-list a:hover,
+#brands-list a:focus,
+#brands-list a:active{
+    font-weight: bold;
+    cursor: pointer;
+}
+a.disabled{
+    pointer-events: none;
+    cursor: default;
+}
+.thin-line{
+    width: 0;
+    height: 2px;
+    position: relative;
+    top:0.5em;
+    background-color: #ffffff;
+    transition: width 2s ease-in-out;
+}
+.thin-line.ungrow{
+    animation: shrink-width 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+}
+
+.thin-line.grow{
+    animation: grow-width 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+}
+
+#brand-images-carousel{
+    width:25vw;
+    height:auto;
+}
+#brand-images-carousel img{
+    object-fit: cover;
+    aspect-ratio: 3/4;
+}
+#brand-images-carousel h1{
+    color: #ffffff;
+    opacity: 0.8;    
+    white-space: nowrap;
+}
+
+/* product page */
+button{
+    border-radius: 0!important;
+}
+#product-carousel{
+    flex-direction: column;
+    overflow:auto;
+    width: 50vw;
+}
+#product-information{
+    position:fixed;
+    width: 50vw;
+    padding-inline:1em;
+}
+#product-information div:first-of-type{
+    padding-right:2em;
+}
+/* custom animations */
+@keyframes grow-width{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+@keyframes shrink-width {
+    0%{
+        width: 100%;
+    }
+    100%{
+        width:0%;
+    }
+}
+@keyframes grow-height{
+    0%{
+        height: 0;
+    }
+    100%{
+        height:100px;
+    }
+}
+@keyframes shrink-height{
+    0%{
+        height: 100px;
+    }
+    100%{
+        height:0;
+    }
+}
+
+/* media query for width 430 and below */
+@media (max-width: 500px) {
+    /* header */
+    #menu-button{
+        position: absolute;
+        top:0;
+        right:0;
+        margin-right:0.5em;
+    }
+    #brands-dropdown{
+        width: 90vw;
+        height: 2em;
+    }
+    #header-thin-line{
+        animation: grow-width 10s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+    }
+    #brand-images-carousel{
+        left:0;
+        width:40vw;
+        height:auto;
+    }
+    #brand-images-carousel h1{
+        white-space: nowrap;
+        float:left !important;
+    }
+
+    /* product page */
+    #product-carousel{
+        height: 50vh;
+        flex:1;
+        width: 100vw;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        order: 2;
+    }      
+    #product-information{
+        position: relative; 
+        width: 100vw; 
+        height: auto;
+        order: 1; 
+    }
+    #product-information h1,
+    #product-information p,
+    #product-information h2{
+        margin: 0;
+    }
+    section>div{
+        flex-direction: column;
+    }
+}
