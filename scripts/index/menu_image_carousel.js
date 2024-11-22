@@ -21,19 +21,19 @@ brands.forEach((brand)=>{ //only on web
     brand.addEventListener("click", (e) => {
         switch(e.currentTarget.innerHTML){
             case('AASTU'):
-                route = "../../images/brands/aastu/";
+                route = "images/brands/aastu/";
                 break;
             case('CHAUTFIFTH'):
-                route = "../../images/brands/chautfifth/";
+                route = "images/brands/chautfifth/";
                 break;
             case("GHOSTBOY"):
-                route = "../../images/brands/ghostboy/";
+                route = "images/brands/ghostboy/";
                 break;
             case("SNAMO"):
-                route = "../../images/brands/snamo/";
+                route = "images/brands/snamo/";
                 break;
             case("THE IDIOT"):
-                route = "../../images/brands/the_idiot/";  
+                route = "images/brands/the_idiot/";  
                 break; 
             default:
                 route = ""; // Default route if no match is found

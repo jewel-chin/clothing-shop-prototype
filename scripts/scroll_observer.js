@@ -14,14 +14,14 @@ const whiteElements = () =>{
     headerH1.classList.add('fw-bold');
 
     headerLine.classList.remove('black');
-    headerLogo.src = "../../images/logos/plop_logo_white.png";
+    headerLogo.src = "images/logos/plop_logo_white.png";
     headerMenuButton.classList.remove('black');
     headerText.forEach((text)=>{
         text.classList.remove("link-dark");
         text.classList.add("link-light");
     })
     listAsterisk.forEach((asterisk)=>{
-        asterisk.src = "../../images/asterisk_white.png";
+        asterisk.src = "images/asterisk_white.png";
     })
     brandThinLine.classList.remove('black');
 }
@@ -31,14 +31,14 @@ const blackElements = ()=>{
     headerH1.classList.add('text-black');
     headerH1.classList.remove('fw-bold');
     headerLine.classList.add('black');
-    headerLogo.src = "../../images/logos/plop_logo.png";
+    headerLogo.src = "images/logos/plop_logo.png";
     headerMenuButton.classList.add('black');
     headerText.forEach((text)=>{
         text.classList.add("link-dark");
         text.classList.remove("link-light");
     })
     listAsterisk.forEach((asterisk)=>{
-        asterisk.src = "../../images/asterisk.png";
+        asterisk.src = "images/asterisk.png";
     })
     brandThinLine.classList.add('black');
 }
