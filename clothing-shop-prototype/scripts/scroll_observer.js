@@ -53,7 +53,7 @@ const aboutObserver = new IntersectionObserver((entries, observer) => {
         }
     });
 }, {
-    threshold: 0.5
+    threshold: 0.3
 });
 
 const landingObserver = new IntersectionObserver((entries, observer) => {
