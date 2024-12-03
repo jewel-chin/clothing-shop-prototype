@@ -21,20 +21,45 @@ brands.forEach((brand)=>{ //only on web
     brand.addEventListener("click", (e) => {
         switch(e.currentTarget.innerHTML){
             case('AASTU'):
-                route = "images/brands/aastu/";
+                if(window.location.hash==='#'|| window.location.hash===''){
+                    route = "images/brands/aastu/";
+                }
+                else{
+                    route = "../images/brands/aastu/"
+                }
                 break;
             case('CHAUTFIFTH'):
-                route = "images/brands/chautfifth/";
+                if(window.location.hash==='#'|| window.location.hash===''){
+                    route = "images/brands/chautfifth/";
+                }
+                else{
+                    route = "../images/brands/chautfifth/"
+                }
                 break;
             case("GHOSTBOY"):
-                route = "images/brands/ghostboy/";
+                if(window.location.hash==='#'|| window.location.hash===''){
+                    route = "images/brands/ghostboy/";
+                }
+                else{
+                    route = "../images/brands/ghostboy/"
+                }
                 break;
             case("SNAMO"):
-                route = "images/brands/snamo/";
+                if(window.location.hash==='#'|| window.location.hash===''){
+                    route = "images/brands/snamo/";
+                }
+                else{
+                    route = "../images/brands/snamo/"
+                }
                 break;
             case("THE IDIOT"):
-                route = "images/brands/the_idiot/";  
-                break; 
+                if(window.location.hash==='#'|| window.location.hash===''){
+                    route = "images/brands/the_idiot/";
+                }
+                else{
+                    route = "../images/brands/the_idiot/"
+                }
+                break;
             default:
                 route = ""; // Default route if no match is found
                 break;
