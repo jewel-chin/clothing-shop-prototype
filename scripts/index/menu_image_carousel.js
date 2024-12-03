@@ -21,7 +21,7 @@ brands.forEach((brand)=>{ //only on web
     brand.addEventListener("click", (e) => {
         switch(e.currentTarget.innerHTML){
             case('AASTU'):
-                if(window.location.hash==='#'|| window.location.hash===''){
+                if(window.location.hash.contains('#') || window.location.hash.contains('index.html')){
                     route = "images/brands/aastu/";
                 }
                 else{
@@ -29,7 +29,7 @@ brands.forEach((brand)=>{ //only on web
                 }
                 break;
             case('CHAUTFIFTH'):
-                if(window.location.hash==='#'|| window.location.hash===''){
+                if(window.location.hash.contains('#') || window.location.hash.contains('index.html')){
                     route = "images/brands/chautfifth/";
                 }
                 else{
@@ -37,7 +37,7 @@ brands.forEach((brand)=>{ //only on web
                 }
                 break;
             case("GHOSTBOY"):
-                if(window.location.hash==='#'|| window.location.hash===''){
+                if(window.location.hash.contains('#') || window.location.hash.contains('index.html')){
                     route = "images/brands/ghostboy/";
                 }
                 else{
@@ -45,7 +45,7 @@ brands.forEach((brand)=>{ //only on web
                 }
                 break;
             case("SNAMO"):
-                if(window.location.hash==='#'|| window.location.hash===''){
+                if(window.location.hash.contains('#') || window.location.hash.contains('index.html')){
                     route = "images/brands/snamo/";
                 }
                 else{
@@ -53,7 +53,7 @@ brands.forEach((brand)=>{ //only on web
                 }
                 break;
             case("THE IDIOT"):
-                if(window.location.hash==='#'|| window.location.hash===''){
+                if(window.location.hash.contains('#') || window.location.hash.contains('index.html')){
                     route = "images/brands/the_idiot/";
                 }
                 else{
