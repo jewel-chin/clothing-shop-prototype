@@ -21,43 +21,43 @@ brands.forEach((brand)=>{ //only on web
     brand.addEventListener("click", (e) => {
         switch(e.currentTarget.innerHTML){
             case('AASTU'):
-                if(window.location.hash.contains('#') || window.location.hash.contains('index.html')){
+                if(window.location.hash.includes('#') || window.location.hash.includes('index.html')){
                     route = "images/brands/aastu/";
                 }
                 else{
-                    route = "../images/brands/aastu/"
+                    route = "../../images/brands/aastu/"
                 }
                 break;
             case('CHAUTFIFTH'):
-                if(window.location.hash.contains('#') || window.location.hash.contains('index.html')){
+                if(window.location.hash.includes('#') || window.location.hash.includes('index.html')){
                     route = "images/brands/chautfifth/";
                 }
                 else{
-                    route = "../images/brands/chautfifth/"
+                    route = "../../images/brands/chautfifth/"
                 }
                 break;
             case("GHOSTBOY"):
-                if(window.location.hash.contains('#') || window.location.hash.contains('index.html')){
+                if(window.location.hash.includes('#') || window.location.hash.includes('index.html')){
                     route = "images/brands/ghostboy/";
                 }
                 else{
-                    route = "../images/brands/ghostboy/"
+                    route = "../../images/brands/ghostboy/"
                 }
                 break;
             case("SNAMO"):
-                if(window.location.hash.contains('#') || window.location.hash.contains('index.html')){
+                if(window.location.hash.includes('#') || window.location.hash.includes('index.html')){
                     route = "images/brands/snamo/";
                 }
                 else{
-                    route = "../images/brands/snamo/"
+                    route = "../../images/brands/snamo/"
                 }
                 break;
             case("THE IDIOT"):
-                if(window.location.hash.contains('#') || window.location.hash.contains('index.html')){
+                if(window.location.hash.includes('#') || window.location.hash.includes('index.html')){
                     route = "images/brands/the_idiot/";
                 }
                 else{
-                    route = "../images/brands/the_idiot/"
+                    route = "../../images/brands/the_idiot/"
                 }
                 break;
             default:
