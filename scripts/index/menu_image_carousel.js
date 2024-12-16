@@ -21,44 +21,19 @@ brands.forEach((brand)=>{ //only on web
     brand.addEventListener("click", (e) => {
         switch(e.currentTarget.innerHTML){
             case('AASTU'):
-                if(window.location.hash.includes('#') || window.location.hash.includes('index.html')){
-                    route = "images/brands/aastu/";
-                }
-                else{
-                    route = "../../images/brands/aastu/"
-                }
+                route = "/clothing-shop-prototype/images/brands/aastu/";
                 break;
             case('CHAUTFIFTH'):
-                if(window.location.hash.includes('#') || window.location.hash.includes('index.html')){
-                    route = "images/brands/chautfifth/";
-                }
-                else{
-                    route = "../../images/brands/chautfifth/"
-                }
+                route = "/clothing-shop-prototype/images/brands/chautfifth/";
                 break;
             case("GHOSTBOY"):
-                if(window.location.hash.includes('#') || window.location.hash.includes('index.html')){
-                    route = "images/brands/ghostboy/";
-                }
-                else{
-                    route = "../../images/brands/ghostboy/"
-                }
+                route = "/clothing-shop-prototype/images/brands/ghostboy/";
                 break;
             case("SNAMO"):
-                if(window.location.hash.includes('#') || window.location.hash.includes('index.html')){
-                    route = "images/brands/snamo/";
-                }
-                else{
-                    route = "../../images/brands/snamo/"
-                }
+                route = "/clothing-shop-prototype/images/brands/snamo/";
                 break;
             case("THE IDIOT"):
-                if(window.location.hash.includes('#') || window.location.hash.includes('index.html')){
-                    route = "images/brands/the_idiot/";
-                }
-                else{
-                    route = "../../images/brands/the_idiot/"
-                }
+                route = "/clothing-shop-prototype/images/brands/the_idiot/";
                 break;
             default:
                 route = ""; // Default route if no match is found
